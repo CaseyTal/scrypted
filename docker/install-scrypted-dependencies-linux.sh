@@ -33,7 +33,7 @@ ENV() {
     echo "ignoring ENV $1"
 }
 
-source <(curl -s https://raw.githubusercontent.com/koush/scrypted/main/docker/Dockerfile.common)
+source <(curl -s https://raw.githubusercontent.com/CaseyTal/scrypted/main/docker/Dockerfile.common)
 
 if [ -z "$SERVICE_USER" ]
 then
