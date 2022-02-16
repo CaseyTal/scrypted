@@ -1,11 +1,6 @@
 ARG BASE="16-bullseye"
 FROM node:${BASE}
 
-# Coral Edge TPU sources.list
-# https://coral.ai/docs/accelerator/get-started/#runtime-on-linux
-RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | tee /etc/apt/sources.list.d/coral-edgetpu.list
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y install software-properties-common apt-utils
